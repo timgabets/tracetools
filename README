@@ -26,3 +26,10 @@ A simple library to print formatted trace messages, e.g.:
 	33 31 31 37 30 35 31 31 31 32 30 38 31 34 30 30         3117051112081400
 	30 30 30 30 31 30 36 38 34 38 31 30 36 38 34 38         0000106848106848
 	30 30 30 31 30 30 30 31 33 33 37 36 34 33               00010001337643
+
+
+
+Usage:
+>>> import from tracetools import trace
+>>> trace('user-defined-title(optional)', data)
+

@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(name='tracetools',
-      version='0.01',
+      version='0.2',
       
-      description='Trace toolkit to print formatted traces of hex- and binary data',
+      description='Trace toolkit to print formatted traces of binary data',
       long_description=open('README').read(),
       
       classifiers=[
