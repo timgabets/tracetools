@@ -1,3 +1,6 @@
+from time import strftime
+from datetime import datetime
+
 
 def dump(data):
     """
@@ -74,3 +77,10 @@ def trace(title, data):
 
     """
     print('{} {}\n{}\n'.format(get_timestamp(), title, dump(data)))
+
+
+def get_timestamp(t=None):
+    """
+    Get current timestamp
+    """
+    return datetime.now().strftime("%H:%M:%S.%f")
