@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='tracetools',
-      version='0.2',
+      version='1.0',
       
       description='Trace toolkit to print formatted traces of binary data',
       long_description=open('README').read(),
