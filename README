@@ -30,6 +30,6 @@ A simple library to print formatted trace messages, e.g.:
 
 
 Usage:
->>> import from tracetools import trace
+>>> from tracetools.tracetools import trace
 >>> trace('user-defined-title(optional)', data)
 
