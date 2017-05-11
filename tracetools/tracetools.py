@@ -76,7 +76,7 @@ def trace(title, data):
 
 
     """
-    print('{} {}\n{}\n'.format(get_timestamp(), title, dump(data)))
+    print('{} {}\n{}'.format(get_timestamp(), title, dump(data)))
 
 
 def get_timestamp(t=None):
