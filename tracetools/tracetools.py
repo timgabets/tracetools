@@ -33,14 +33,17 @@ def dump(data):
     for c in data:
         try: # python 3
             dump += '{:02x} '.format(c) 
+            if chr(c) >= ' ' and chr(c) < '~':
+                dump_ascii += chr(c)
+            else:
+                dump_ascii += '.'
                 
         except: # python 2.x
             dump += '{:02x} '.format(ord(c))
-            
-        if chr(c) >= ' ' and chr(c) < '~':
-            dump_ascii += chr(c)
-        else:
-            dump_ascii += '.'
+            if c >= ' ' and c < '~':
+                dump_ascii += c
+            else:
+                dump_ascii += '.'
 
         if(i % 16 == 0):
             dump = dump + padding + dump_ascii + '\n\t'

@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='tracetools',
-      version='1.12',
+      version='1.2',
       
       description='Trace toolkit to print formatted traces of binary data',
       long_description=open('README').read(),
@@ -10,6 +10,8 @@ setup(name='tracetools',
         'License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)',
         'Operating System :: OS Independent',
         
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
