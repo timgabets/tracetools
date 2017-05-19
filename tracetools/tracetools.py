@@ -58,7 +58,7 @@ def dump(data):
     return dump
 
 
-def trace(title, data):
+def trace(data, title=None):
     """
     Trace the binary data - add user-defined title, timstamp and dumped data, e.g.:
 
@@ -77,9 +77,11 @@ def trace(title, data):
     00 00 9f 26 08 ed 2c d0 d2 98 94 fb aa 9f 36 02         ...&..,.......6.
     00 01 9f 37 04 8f a4 f2 bd 9f 1a 02 06 43               ...7.........C
 
-
     """
-    print('{} {}\n{}'.format(get_timestamp(), title, dump(data)))
+    if title:
+        print('{} {}\n{}'.format(get_timestamp(), title, dump(data)))
+    else:
+        print('{}\n{}'.format(get_timestamp(), dump(data)))
 
 
 def get_timestamp(t=None):
