@@ -31,9 +31,6 @@ A simple library to print formatted trace messages (especially useful with the b
 
 Usage:
 >>> from tracetools.tracetools import trace
->>> trace('user-defined-title(optional)', data)
-
->>> from tracetools.tracetools import trace
 >>> trace(b'\x01\xFF17398172371892371982737981723')
 22:27:00.967302
 	01 ff 31 37 33 39 38 31 37 32 33 37 31 38 39 32         ..17398172371892
