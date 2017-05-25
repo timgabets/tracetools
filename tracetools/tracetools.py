@@ -24,7 +24,7 @@ def dump(data):
     i = 1
 
     if( isinstance(data, bytes) == False ):
-        raise TypeError("Expected bytes for data")
+        raise TypeError('tracetools.dump(): data is expected to be bytes, not {}'.format(type(data)))
 
     dump = '\t'
     dump_ascii = ''
