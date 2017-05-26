@@ -3,7 +3,8 @@ tracetools
  
 A simple library to print formatted trace messages (especially useful with the binary data):
 
-12:08:16.762628 >> 206 bytes sent:
+ >>> trace(binary_data)
+ 12:08:16.762628 >> 206 bytes sent:
 	00 cc 30 31 30 30 72 30 05 80 20 c0 92 00 31 36         ..0100r0.. ...16
 	38 39 39 30 30 31 31 32 33 34 35 36 37 38 39 30         8990011234567890
 	30 30 30 30 30 30 30 30 30 30 30 30 30 32 30 30         0000000000000200
@@ -18,7 +19,8 @@ A simple library to print formatted trace messages (especially useful with the b
 	00 00 9f 26 08 ed 2c d0 d2 98 94 fb aa 9f 36 02         ...&..,.......6.
 	00 01 9f 37 04 8f a4 f2 bd 9f 1a 02 06 43               ...7.........C
 
-12:08:17.013138 << 110 bytes received: 
+ >>> trace(binary_data)
+ 12:08:17.013138 << 110 bytes received:
 	00 6c 30 31 31 30 72 30 00 00 0e 80 80 00 31 36         .l0110r0......16
 	38 39 39 30 30 31 31 32 33 34 35 36 37 38 39 30         8990011234567890
 	30 30 30 30 30 30 30 30 30 30 30 30 30 32 30 30         0000000000000200
@@ -30,16 +32,13 @@ A simple library to print formatted trace messages (especially useful with the b
 
 
 Usage:
->>> from tracetools.tracetools import trace
->>> trace(b'\x01\xFF17398172371892371982737981723')
-22:27:00.967302
+
+ >>> from tracetools.tracetools import trace
+ >>> trace(b'\x01\xFF17398172371892371982737981723')
+ 22:27:00.967302
 	01 ff 31 37 33 39 38 31 37 32 33 37 31 38 39 32         ..17398172371892
 	33 37 31 39 38 32 37 33 37 39 38 31 37 32 33            371982737981723
 	
->>> trace(title='Some stuff received:', data=b'\x00\x6c\x30\x31\x31\x30\x72\x30\x00\x00\x0e\x80\x80\x00\x31\x36')
-22:28:53.709328 Some stuff received:
+ >>> trace(title='Some stuff received:', data=b'\x00\x6c\x30\x31\x31\x30\x72\x30\x00\x00\x0e\x80\x80\x00\x31\x36')
+ 22:28:53.709328 Some stuff received:
 	00 6c 30 31 31 30 72 30 00 00 0e 80 80 00 31 36         .l0110r0......16
-	
-
-
-
