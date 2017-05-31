@@ -20,5 +20,9 @@ class TestIsoTools(unittest.TestCase):
     def test_dump_two_lines_ascii(self):
         self.assertEqual(dump(b'loremipsumdolorsitamet'), '\t6c 6f 72 65 6d 69 70 73 75 6d 64 6f 6c 6f 72 73         loremipsumdolors\n\t69 74 61 6d 65 74                                       itamet\n\t')
 
+    def test_dump_string_raise(self):
+        with self.assertRaisesRegex(TypeError, "data is expected to be bytes, not <class 'str'>"):
+            dump('loremipsumdolorsitamet')
+
 if __name__ == '__main__':
     unittest.main()
